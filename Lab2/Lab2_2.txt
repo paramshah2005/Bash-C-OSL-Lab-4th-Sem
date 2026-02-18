@@ -1,0 +1,61 @@
+(base) mca@computinglab25-39:~/Param_240905320/Lab2$ cat sample.txt
+# Displaying the contents of the 'sample.txt' file.
+Apple
+banana
+Grapefruit
+Dragonfruit.
+Mango
+pineapple
+Raspberry
+Cherry
+Elderberry
+Plum
+Peach
+Avocado
+Grape
+Blueberry
+Melon
+Lemon.
+Orange
+Pear
+Papaya
+Li
+Date
+
+(base) mca@computinglab25-39:~/Param_240905320/Lab2$ grep -x '^..$' sample.txt
+# Searching for lines that have exactly two characters using the pattern '^..$'.
+Li
+
+(base) mca@computinglab25-39:~/Param_240905320/Lab2$ grep '^[A-Z]' sample.txt
+# Looking for lines that start with an uppercase letter using the pattern '^[A-Z]'.
+Apple
+Grapefruit
+Dragonfruit.
+Mango
+Raspberry
+Cherry
+Elderberry
+Plum
+Peach
+Avocado
+Grape
+Blueberry
+Melon
+Lemon.
+Orange
+Pear
+Papaya
+Li
+Date
+
+(base) mca@computinglab25-39:~/Param_240905320/Lab2$ grep '\.$' sample.txt
+# Searching for lines that end with a period using the pattern '\.$'.
+Dragonfruit.
+Lemon.
+
+(base) mca@computinglab25-39:~/Param_240905320/Lab2$ grep ' ' sample.txt
+# Searching for lines that contain at least one blank space using the pattern ' '.
+
+(base) mca@computinglab25-39:~/Param_240905320/Lab2$ grep '[0-9]' sample.txt > output.txt
+# Searching for lines that contain digits using the pattern '[0-9]' and redirecting the output to 'output.txt'.
+

@@ -1,0 +1,139 @@
+question text
+shell script
+simulated output
+
+Write a shell script to find whether a given file is the directory or regular file.
+
+Shell Script
+#!/bin/sh
+echo "Enter the file or directory name:"
+read name
+
+if [ -d "$name" ]; then
+echo "$name is a directory"
+elif [ -f "$name" ]; then
+echo "$name is a regular file"
+else
+echo "$name does not exist"
+fi
+
+Simulated Output
+Enter the file or directory name:
+test.txt
+test.txt is a regular file
+
+Write a shell script to list all files (only file names) containing the input pattern (string) in the folder entered by the user.
+
+Shell Script
+#!/bin/sh
+echo "Enter the folder name:"
+read folder
+
+echo "Enter the pattern:"
+read pattern
+
+grep -l "$pattern" "$folder"/* | xargs -n 1 basename
+
+Simulated Output
+Enter the folder name:
+docs
+Enter the pattern:
+hello
+file1.txt
+notes.txt
+
+Write a shell script to replace all files with .txt extension with .text in the current directory recursively.
+
+Shell Script
+#!/bin/sh
+find . -type f -name "*.txt" | while read file
+do
+mv "$file" "${file%.txt}.text"
+done
+
+Simulated Output
+./abc.txt renamed to ./abc.text
+./OS/sample.txt renamed to ./OS/sample.text
+
+Write a shell script to calculate the gross salary.
+GS = Basics + TA + 10% of Basics.
+
+Shell Script
+#!/bin/sh
+echo "Enter Basic Salary:"
+read basic
+
+echo "Enter TA:"
+read ta
+
+gs=$(echo "$basic + $ta + ($basic * 0.10)" | bc)
+echo "Gross Salary = $gs"
+
+Simulated Output
+Enter Basic Salary:
+10000
+Enter TA:
+2000
+Gross Salary = 13000.0
+
+Write a program to copy all the files (having file extension input by the user) in the current folder to the new folder input by the user (single level only).
+
+Shell Script
+#!/bin/sh
+echo "Enter file extension:"
+read ext
+
+echo "Enter destination folder:"
+read folder
+
+mkdir -p "$folder"
+cp *"$ext" "$folder"
+
+Simulated Output
+Enter file extension:
+.text
+Enter destination folder:
+TEXT
+Files copied to TEXT folder
+
+Write a shell script to modify all occurrences of “ex:” with “Example:” only if it occurs at the start of the line or after a period (.).
+
+Shell Script
+#!/bin/sh
+for file in *
+do
+if [ -f "$file" ]; then
+sed -i 's/^ex:/Example:/; s/. *ex:/. Example:/g' "$file"
+fi
+done
+
+Simulated Output
+Before:
+Example: this is first occurrence
+This is a sentence. Example: replaced
+middle ex: not replaced
+
+After:
+Example: this is first occurrence
+This is a sentence. Example: replaced
+middle ex: not replaced
+
+Write a shell script which deletes all the even numbered lines in a text file.
+
+Shell Script
+#!/bin/sh
+echo "Enter file name:"
+read file
+
+sed -i '2~2d' "$file"
+
+Simulated Output
+Before:
+Line1
+Line2
+Line3
+Line4
+
+After:
+Line1
+Line3

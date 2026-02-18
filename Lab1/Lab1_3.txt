@@ -1,0 +1,20 @@
+# List all files having the extension ".txt"
+(base) mca@computinglab25-39:~/Param_240905320/Lab1$ ls *.txt
+1.txt  Lab1_1.txt  Lab1_2.txt  temp5.txt  temp.txt
+
+# List files whose names contain at least one digit
+(base) mca@computinglab25-39:~/Param_240905320/Lab1$ ls *[0-9]*
+1.txt  Lab1_1.txt  Lab1_2.txt  temp5.txt
+
+# List files whose names have at least 4 characters (including extension)
+(base) mca@computinglab25-39:~/Param_240905320/Lab1$ ls ????*
+1.txt  Lab1_1.txt  Lab1_2.txt  temp5.txt  temp.txt
+
+# List files whose base name has at least 4 characters and ends with ".txt"
+(base) mca@computinglab25-39:~/Param_240905320/Lab1$ ls ????*.txt
+Lab1_1.txt  Lab1_2.txt  temp5.txt  temp.txt
+
+# List .txt files that do not start with a vowel
+(base) mca@computinglab25-39:~/Param_240905320/Lab1$ ls [!aeiouAEIOU]*.txt
+1.txt  Lab1_1.txt  Lab1_2.txt  temp5.txt  temp.txt
+

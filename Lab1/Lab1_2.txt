@@ -1,0 +1,66 @@
+# Display the complete contents of file
+(base) mca@computinglab25-39:~/Param_240905320/Lab1$ cat temp.txt
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+Nisi ut aliquip ex ea commodo consequat duis aute irure dolor.
+In reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.
+Excepteur sint occaecat cupidatat non proident sunt in culpa.
+Qui officia deserunt mollit anim id est laborum lorem ipsum.
+Curabitur pretium tincidunt lacus nulla gravida orci a odio.
+Nullam varius turpis et commodo pharetra est eros bibendum.
+Aliquam erat volutpat nam dui mi tincidunt quis accumsan.
+
+# Display the first 5 lines of file
+(base) mca@computinglab25-39:~/Param_240905320/Lab1$ head -n 5 temp.txt
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+Nisi ut aliquip ex ea commodo consequat duis aute irure dolor.
+In reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla.
+
+# Display the last 5 lines of file
+(base) mca@computinglab25-39:~/Param_240905320/Lab1$ tail -n 5 temp.txt
+Qui officia deserunt mollit anim id est laborum lorem ipsum.
+Curabitur pretium tincidunt lacus nulla gravida orci a odio.
+Nullam varius turpis et commodo pharetra est eros bibendum.
+Aliquam erat volutpat nam dui mi tincidunt quis accumsan.
+
+# Copy temp.txt to a new file named temp1.txt
+(base) mca@computinglab25-39:~/Param_240905320/Lab1$ cp temp.txt temp1.txt
+
+# List files
+(base) mca@computinglab25-39:~/Param_240905320/Lab1$ ls
+Lab1_1.txt  temp1.txt  temp.txt
+
+# Rename temp1.txt to temp_renamed.txt
+(base) mca@computinglab25-39:~/Param_240905320/Lab1$ mv temp1.txt temp_renamed.txt
+
+# List files
+(base) mca@computinglab25-39:~/Param_240905320/Lab1$ ls
+Lab1_1.txt  temp_renamed.txt  temp.txt
+
+# Delete the file temp_renamed.txt
+(base) mca@computinglab25-39:~/Param_240905320/Lab1$ rm temp_renamed.txt
+
+# Create a new directory named tempdir
+(base) mca@computinglab25-39:~/Param_240905320/Lab1$ mkdir tempdir
+
+# List files and directories
+(base) mca@computinglab25-39:~/Param_240905320/Lab1$ ls
+Lab1_1.txt  tempdir  temp.txt
+
+# Remove the empty directory tempdir
+(base) mca@computinglab25-39:~/Param_240905320/Lab1$ rmdir tempdir
+
+# List files and directories
+(base) mca@computinglab25-39:~/Param_240905320/Lab1$ ls
+Lab1_1.txt  temp.txt
+
+# Delete the file temp.txt
+(base) mca@computinglab25-39:~/Param_240905320/Lab1$ rm temp.txt
+
+# List files
+(base) mca@computinglab25-39:~/Param_240905320/Lab1$ ls
+Lab1_1.txt
+

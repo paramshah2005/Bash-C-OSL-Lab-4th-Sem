@@ -1,0 +1,25 @@
+(base) mca@computinglab25-39:~/Param_240905320/Lab2$ cat studentInformation.txt
+#Lists all the content of the studentInformation.txt file
+RegistrationNo,Name,Department,Branch,Section,Sub1,Sub2,Sub3
+1234:ABC:ICT:CCE:A:78:65:82
+1235:BCD:ICT:IT:B:62:79:58
+1314:DEF:HUM:MATHS:D:85:55:72
+1521:EFG:CSE:CSE:C:70:88:63
+1109:FGH:CSE:AIML:D:67:74:81
+1223:GHI:CHM:CME:B:59:83:69
+1325:HIJ:MECH:MECH:C:76:61:77
+1834:IJK:MECH:MECHX:A:84:57:68
+1923:JKL:DSE:DSE:C:64:72:80
+1200:KLM:CSFT:CSFT:D:71:66:75
+
+(base) mca@computinglab25-39:~/Param_240905320/Lab2$ grep --count 'ICT' studentInformation.txt
+#List the count of 'ICT' in file
+2
+
+(base) mca@computinglab25-39:~/Param_240905320/Lab2$ sed 's/IT/Information Technology/g' studentInformation.txt > ITStudents.txt
+#Replaces all instances of 'IT' in the file with 'Information Technology' and pipes the output to ITStudents.txt file
+
+(base) mca@computinglab25-39:~/Param_240905320/Lab2$ echo "($(grep "^1234:" studentInformation.txt | cut -d: -f6-8 | tr ':' '+')) / 3" | bc
+#Takes the marks of student with RegistrationNo = '1234' and prints the average of the marks into the terminal
+75
+

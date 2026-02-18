@@ -1,0 +1,8 @@
+Example: this line should be replaced because it starts with ex:
+This is a normal sentence.
+This is a sentence. Example: this should be replaced because it occurs after a period.
+This is a sentence. Example: this should also be replaced (no space after period).
+This is a sentence with ex: in the middle and should NOT be replaced.
+Here is another example: ex: should NOT be replaced because it is after a colon.
+Random text ex: still should not change.
+.End of sentence. Example: this should be replaced.

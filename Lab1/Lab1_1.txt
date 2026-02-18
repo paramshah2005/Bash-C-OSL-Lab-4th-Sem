@@ -1,0 +1,37 @@
+# Print current working directory
+(base) mca@computinglab25-39:~$ pwd
+/home/mca
+
+# Create a new directory named Param_240905320
+(base) mca@computinglab25-39:~$ mkdir Param_240905320
+
+# Change to the Param_240905320 directory
+(base) mca@computinglab25-39:~$ cd Param_240905320
+
+# Create a new directory named Lab1
+(base) mca@computinglab25-39:~/Param_240905320$ mkdir Lab1
+
+# Change to the Lab1 directory
+(base) mca@computinglab25-39:~/Param_240905320$ cd Lab1
+
+# Open first.txt with gedit text editor
+(base) mca@computinglab25-39:~/Param_240905320/Lab1$ gedit first.txt
+
+# Display the content of first.txt
+(base) mca@computinglab25-39:~/Param_240905320/Lab1$ cat first.txt
+This is my first OSL Lab
+
+# Show the first few lines of first.txt
+(base) mca@computinglab25-39:~/Param_240905320/Lab1$ head first.txt
+This is my first OSL Lab
+
+# Show the last few lines of first.txt
+(base) mca@computinglab25-39:~/Param_240905320/Lab1$ tail first.txt
+This is my first OSL Lab
+
+# Remove the file first.txt
+(base) mca@computinglab25-39:~/Param_240905320/Lab1$ rm first.txt
+
+# List the contents of the current empty directory
+(base) mca@computinglab25-39:~/Param_240905320/Lab1$ ls
+
